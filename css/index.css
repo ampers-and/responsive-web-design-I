@@ -67,8 +67,7 @@ h1, h2, h3, h4, h5 {
 /* #endregion */
 
 /* #region-index */
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
-.tablet-disp{
+.logo-disp{
     display:none;
 }
 
@@ -76,7 +75,6 @@ header{
 	margin: 0 auto 30px auto;
 	display:flex;
 	justify-content: space-between;
-	/*border: 1px solid salmon; */
 }
 
 nav{
@@ -112,7 +110,6 @@ nav a{
 } */
 .title{
 	margin-bottom: 50px;
-	/* border: 1px solid cyan; */
 	display: flex;
 	justify-content: space-between;
 }
@@ -124,7 +121,6 @@ nav a{
 	height:376px;
 	display:inline-block;
 	padding:20px;
-	/* border: 1px solid green; */
 	font-size:80px;
 	text-align: center;
 	vertical-align: top;
@@ -149,8 +145,8 @@ nav a{
 /* .text h4{
 	font-family: Bahianita;
 	font-size: 20px; */
-.text{
-	/* display:inline-block; */
+
+    .text{
 	font-style: Titillium;
 	color:rgb(64, 64, 64);
 }
@@ -160,9 +156,7 @@ nav a{
 	justify-content: space-between;
 }
 .top .text{
-	/* border: 1px solid blue; */
-	width: 400px;
-	/* margin: 10px auto; */
+	margin: 1%;
 	padding: 30px 0;
 }
 .bottom{
@@ -171,8 +165,7 @@ nav a{
 	justify-content: space-between;
 }
 .bottom .text{
-	width: 260px;
-	margin:10px 20px 30px 0;
+	margin:1%;
 	padding:30px 0;
 }
 .container {
@@ -196,12 +189,12 @@ color: rgb(64, 64, 64);
 	border: 1px solid teal !important;
 } */
 
-@media screen and (max-width:800px)
+@media screen and (max-width:800px) /* <--tablet display */
 {
     .logo{
         display:none;
     }
-    .tablet-disp{
+    .logo-disp{
         display:block;
         text-align: center;
         margin:3%;
@@ -220,5 +213,42 @@ color: rgb(64, 64, 64);
     .middle-img{
         width:100%;
         height:auto;
+    }
+}
+
+@media screen and (max-width:500px) /* <-- mobile display */
+{
+    .logo-disp{
+        border-bottom:1px solid gray;
+        width:100%;
+        display: block;
+        margin:3% 0 0 0;
+        padding:2%;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-around;
+    }
+    nav a{
+        border-bottom:1px solid gray;
+        width:100%;
+        padding: 3%;
+
+    }
+    .container{
+        width: 96%;
+        margin:2%;
+    }
+    .top{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .bottom{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .text{
+        margin:.5%;
     }
 }
