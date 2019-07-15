@@ -68,6 +68,10 @@ h1, h2, h3, h4, h5 {
 
 /* #region-index */
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.tablet-disp{
+    display:none;
+}
+
 header{
 	margin: 0 auto 30px auto;
 	display:flex;
@@ -77,7 +81,8 @@ header{
 
 nav{
 	display:flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    width:100%
 	/* display: inline-block;
 	border: 1px solid chocolate;
 	scrollable
@@ -129,7 +134,8 @@ nav a{
 	margin: auto;
 	border: 1px solid black;
 	padding: 05px 30px;
-	font-size:20px;
+    font-size:20px;
+    background-color:white;
 }
 /* @keyframes button-change{
 	from{background-color: white;}
@@ -186,20 +192,33 @@ margin:15px 0;
 color: rgb(64, 64, 64);
 }
 /* #endregion */
-*{
+/* *{
 	border: 1px solid teal !important;
-}
-/* #region-services */
-.s-main{
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-around;
-	align-content: space-around;
-}
-.row{
-	display:flex;
+} */
 
+@media screen and (max-width:800px)
+{
+    .logo{
+        display:none;
+    }
+    .tablet-disp{
+        display:block;
+        text-align: center;
+        margin:3%;
+    }
+    .container{
+        width:96%;
+        margin:2%
+    }
+    .title img{
+        display:none;
+    }
+    .title {
+        justify-content:center;
+    }
 
+    .middle-img{
+        width:100%;
+        height:auto;
+    }
 }
-/* endregion */
-
