@@ -67,28 +67,30 @@ h1, h2, h3, h4, h5 {
 /* #endregion */
 
 /* #region-index */
-.logo-disp{
-    display:none;
-}
-
 header{
 	margin: 0 auto 30px auto;
 	display:flex;
 	justify-content: space-between;
 }
-
+.logo{
+    display:none;
+}
+.logo-disp{
+    border-bottom:1px solid gray;
+    width:100%;
+    display: block;
+    margin:3% 0 0 0;
+    padding:2%;
+    text-align: center;
+}
 nav{
 	display:flex;
     justify-content: space-between;
-    width:100%
-	/* display: inline-block;
-	border: 1px solid chocolate;
-	scrollable
-	overflow: hidden;
-	background-image:radial-gradient(purple,cornflowerblue);
-	position:fixed;
-	top:0;
-	width:876px; */
+    width:100%;
+    /* mobile first */
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: space-around;
 }
 nav a{
 	font: Titillium;
@@ -97,24 +99,18 @@ nav a{
 	font-size: 15px;
 	font-weight:bold;
 	text-align:center;
-	margin: 10px 38px 0 0;
-	/*border: 1px solid black; */
-	/* scroll */
-	/* float: left;
-	display: block; */
+    margin: 10px 38px 0 0;
+    /* mobile first */
+    border-bottom:1px solid gray;
+    width:100%;
+    padding:3%;
 }
-
-/* nav a:hover{
-	color:purple;
-	background-color:cornflowerblue;
-} */
-.title{
-	margin-bottom: 50px;
-	display: flex;
-	justify-content: space-between;
+.title {
+    display:flex;
+    justify-content:center;
 }
 .title img{
-	display:inline-block;
+	display:none;
 }
 .title .title-text{
 	width:400px;
@@ -133,44 +129,31 @@ nav a{
     font-size:20px;
     background-color:white;
 }
-/* @keyframes button-change{
-	from{background-color: white;}
-	to{color:white;border-color:tomato;background-image:radial-gradient(blue,black)}
-} */
-/* .title	button:hover{
-	animation-name: button-change;
-	animation-duration: 2s;
-} */
-
-/* .text h4{
-	font-family: Bahianita;
-	font-size: 20px; */
-
 .text{
 	font-style: Titillium;
-	color:rgb(64, 64, 64);
+    color:rgb(64, 64, 64);
+    margin:1%;
+    padding:30px 0;
 }
 .top{
 	border-top: 1px solid rgb(64, 64, 64);
-	display:flex;
-	justify-content: space-between;
+    display:flex;
+    flex-direction: column;
+	justify-content: space-around;
 }
-.top .text{
-	margin: 1%;
-	padding: 30px 0;
+.middle-img{
+    width:100%;
+    height:auto;
 }
 .bottom{
 	border-bottom:1px solid rgb(64, 64, 64);
-	display:flex;
-	justify-content: space-between;
-}
-.bottom .text{
-	margin:1%;
-	padding:30px 0;
+    display:flex;
+    flex-direction: column;
+	justify-content: space-around;
 }
 .container {
-	width: 876px;
-	margin: 40px;
+	width: 94%;
+	margin: 3%;
 }
 .contact{
 	margin: 30px auto;
@@ -189,66 +172,47 @@ color: rgb(64, 64, 64);
 	border: 1px solid teal !important;
 } */
 
-@media screen and (max-width:800px) /* <--tablet display */
-{
-    .logo{
-        display:none;
-    }
+@media screen and (min-width:500px){
     .logo-disp{
-        display:block;
-        text-align: center;
-        margin:3%;
+        border:hidden;
     }
-    .container{
-        width:96%;
-        margin:2%
+    nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width:100%
     }
-    .title img{
-        display:none;
+    nav a{
+        border:hidden;
+        padding:0;
     }
-    .title {
-        justify-content:center;
+    .top{
+        flex-direction: row;
+        justify-content: space-between;
     }
-
-    .middle-img{
-        width:100%;
-        height:auto;
+    .bottom{
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
-@media screen and (max-width:500px) /* <-- mobile display */
-{
+@media screen and (min-width:800px){
     .logo-disp{
-        border-bottom:1px solid gray;
-        width:100%;
-        display: block;
-        margin:3% 0 0 0;
-        padding:2%;
+        display: none;
     }
-    nav{
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: space-around;
-    }
-    nav a{
-        border-bottom:1px solid gray;
-        width:100%;
-        padding: 3%;
-
+    .logo{
+        display:inline-block;
     }
     .container{
-        width: 96%;
-        margin:2%;
+        width:876px;
+        margin:10px
     }
-    .top{
-        flex-direction: column;
-        justify-content: space-around;
+    .title{
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
     }
-    .bottom{
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .text{
-        margin:.5%;
+    .title img{
+        display:inline-block;
     }
 }
